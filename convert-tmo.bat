@@ -35,3 +35,4 @@ fastboot flash vendor vendor.img
 fastboot flash xbl xbl.img
 fastboot flash xbl_config xbl_config.img
 echo Please reboot to recovery via the menus and wipe everything prior to boot
+pause
