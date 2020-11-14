@@ -1,7 +1,3 @@
-@echo off
-cls
-echo Please make sure you are in fastbootd, your screen should say 'fastbootd' on top.
-pause
 fastboot flash product product.img
 fastboot flash abl abl.img
 fastboot flash aop aop.img
@@ -34,5 +30,3 @@ fastboot --disable-verity flash vbmeta_system vbmeta_system.img
 fastboot flash vendor vendor.img
 fastboot flash xbl xbl.img
 fastboot flash xbl_config xbl_config.img
-echo Please reboot to recovery via the menus and wipe everything prior to boot
-pause
