@@ -1,3 +1,14 @@
+@echo off
+cls
+echo Please make sure you are in fastbootd, your screen should say 'fastbootd' on top.
+pause
+setlocal enableextensions
+set count=0
+for %%x in (*.img) do set /a count+=1
+if %count% LSS 30 (
+echo Your working directory does not contain the .img files. Make sure you are executing this script from the payload output directory (where all the .img files are)
+) else (
+echo "lashing... Please report any errors to the thread
 fastboot flash product product.img
 fastboot flash abl abl.img
 fastboot flash aop aop.img
@@ -30,3 +41,7 @@ fastboot --disable-verity flash vbmeta_system vbmeta_system.img
 fastboot flash vendor vendor.img
 fastboot flash xbl xbl.img
 fastboot flash xbl_config xbl_config.img
+echo Please reboot to recovery via the menus and wipe everything prior to boot
+)
+endlocal
+pause
