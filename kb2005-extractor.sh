@@ -38,11 +38,4 @@ dd if=/dev/block/by-name/logfs of=/sdcard/imgdump/logfs.img
 dd if=/dev/block/by-name/storsec_a of=/sdcard/imgdump/storsec.img
 dd if=/dev/block/by-name/reserve2 of=/sdcard/imgdump/reserve2.img
 dd if=/dev/block/by-name/mdm_oem_stanvbk of=/sdcard/imgdump/mdm_oem_stanvbk.img
-dd if=/dev/block/by-name/odm of=/sdcard/imgdump/odm.img
-dd if=/dev/block/by-name/product of=/sdcard/imgdump/product.img
-dd if=/dev/block/by-name/reserve of=/sdcard/imgdump/reserve.img
-dd if=/dev/block/by-name/system_ext of=/sdcard/imgdump/system_ext.img
-dd if=/dev/block/by-name/system of=/sdcard/imgdump/system.img
-dd if=/dev/block/by-name/tz of=/sdcard/imgdump/tz.img
-dd if=/dev/block/by-name/vendor of=/sdcard/imgdump/vendor.img
-tar czvf /sdcard/imgdump/kb2005-images.tgz /sdcard/imgdump/*.img
+tar czvf /sdcard/kb2005-images.tgz /sdcard/imgdump/*
